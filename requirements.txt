@@ -1,0 +1,11 @@
+﻿numpy
+pyyaml
+torch
+tqdm
+rasterio
+scipy
+matplotlib
+earthengine-api
+geopandas
+shapely
+pyproj

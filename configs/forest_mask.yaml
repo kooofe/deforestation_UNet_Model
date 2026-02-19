@@ -1,0 +1,30 @@
+# Forest mask export config
+eeProject: "gen-lang-client-0051530829"
+
+# Choose: geojson | auto
+aoiMode: geojson
+aoi_geojson_path: data/aoi.geojson
+
+# Auto-AOI params (used if aoiMode=auto)
+searchBox: [-126.0, 49.0, -120.0, 54.5]
+chipKm: 10
+
+# Export
+exportCRS: ""           # leave empty -> auto UTM
+scale: 30
+exportFolder: deforest_demo
+fileNamePrefix: forest_mask
+taskDescription: forest_mask_export
+regionMode: aoi
+maxPixels: 1e13
+
+# Forest source
+forestSource: hansen_and_dw  # hansen | dynamic_world | hansen_and_dw
+treecoverThresh: 30
+dwTreesProbThresh: 0.6
+dwStart: ""
+dwEnd: ""
+
+# Optional dates for DW fallback
+preStart: "2022-06-01"
+postEnd: "2023-09-30"

@@ -1,0 +1,33 @@
+﻿chips_dir: data/chips_demo
+checkpoint: outputs/checkpoints/best.pt
+output_dir: outputs/demo/run_001
+threshold: 0.6
+min_area_ha: 1.0
+panel_chip_index: 0
+pre_dates: 2022-06-01_to_2022-09-30
+post_dates: 2023-06-01_to_2023-09-30
+channels:
+  - pre_B2
+  - pre_B3
+  - pre_B4
+  - pre_B8
+  - pre_B11
+  - pre_B12
+  - pre_NDVI
+  - pre_NBR
+  - post_B2
+  - post_B3
+  - post_B4
+  - post_B8
+  - post_B11
+  - post_B12
+  - post_NDVI
+  - post_NBR
+  - dNDVI
+  - dNBR
+baseline:
+  dndvi_thr: -0.2
+  dnbr_thr: -0.2
+postprocess:
+  morph_open: 1
+  morph_close: 1

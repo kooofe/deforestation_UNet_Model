@@ -1,0 +1,54 @@
+checkpoint: ../outputs/train/run_main/best.pt
+# Replace raster/forest paths as needed for your target tile/AOI.
+raster: ../data/stacked_tifs/stacked-0000000000-0000000000.tif
+out_dir: ../outputs/demo/run_main
+threshold: 0.55
+tile: 256
+stride: 256
+tile_gallery: 12
+device: auto
+open_px: 0
+close_px: 2
+safe_postproc: true
+morph_close: 2
+save_probs: true
+drop_extra_band: true
+forest_mask_path: ../data/forest_masks/forest_mask-0000000000-0000000000.tif
+forest_thr: 30
+debug: false
+change_gate:
+  enabled: true
+  use_dndvi: true
+  dndvi_band_name: dNDVI
+  dndvi_thr: -0.12
+  use_dnbr: true
+  dnbr_band_name: dNBR
+  dnbr_thr: -0.10
+# visualization only (does not affect mask/polygons/summary)
+viz_alpha: 0.75
+viz_color: [1.0, 0.0, 0.0]
+viz_outline: true
+viz_outline_px: 2
+viz_dilate_auto: false
+viz_target_coverage: 0.005
+viz_dilate_max_px: 12
+viz_dilate_min_px: 0
+viz_boundary_alpha: 1.0
+viz_show_legend: true
+viz_legend_loc: "lower right"
+viz_title_prefix: ""
+viz_footer: true
+viz_mode: "final"
+viz_tile: 128
+viz_stride: 128
+viz_zoom_largest_component: true
+enable_forest_change_gate: true
+pre_ndvi_min: 0.6
+dndvi_max: -0.2
+dnbr_max: -0.12
+gate_mode: "either"
+zoom_margin_px: 64
+gallery_topk: 12
+gallery_tile_px: 192
+viz_dilate_px: 0
+min_area_m2: 2500

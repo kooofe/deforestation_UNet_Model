@@ -1,0 +1,41 @@
+seed: 42
+data_dir: data/chips_usable_20260210_111052
+train_list: data/chips_usable_20260210_111052/train_vf90_ratio3.txt
+val_list: data/chips_usable_20260210_111052/val_vf90_ratio3.txt
+val_frac: 0.2
+append_valid_channel: true
+batch_size: 8
+num_workers: 4
+epochs: 40
+lr: 0.001
+weight_decay: 0.0001
+pos_weight: 12.0
+oversample_pos: true
+val_threshold: 0.55
+amp: true
+device: cuda
+nan_log_path: outputs/warnings/nan_files.log
+warn_once_global: true
+channels:
+  - pre_B2
+  - pre_B3
+  - pre_B4
+  - pre_B8
+  - pre_B11
+  - pre_B12
+  - pre_NDVI
+  - pre_NBR
+  - post_B2
+  - post_B3
+  - post_B4
+  - post_B8
+  - post_B11
+  - post_B12
+  - post_NDVI
+  - post_NBR
+  - dNDVI
+  - dNBR
+model:
+  in_channels: 18
+  base_channels: 32
+output_dir: outputs/train/run_main
